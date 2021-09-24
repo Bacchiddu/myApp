@@ -1,0 +1,33 @@
+.NavBarCompleto h1{
+    display: flex;
+    justify-content: center;
+    font-family: Arial;
+}
+.NavBar{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(34, 6, 6);
+    
+}
+.NavBar ul{
+    display: flex;
+    padding: 0;
+    margin: 0;
+    
+}
+.NavBar ul li{
+    display: inline-block;
+    border-color: white;
+}
+
+.NavBar ul li a{
+    display: block;
+    color: white;
+    padding: 15px 150px;
+    text-decoration: none;
+    font-family: Arial;
+}
+.NavBar ul li a:hover{
+    color: teal;
+}

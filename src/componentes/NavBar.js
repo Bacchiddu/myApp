@@ -6,7 +6,7 @@ export default function NavBar() {
         <div className="NavBar">
             <ul>
                 <li>
-                    <a href="#">Homesssnps</a>
+                    <a href="#">Home</a>
                 </li>
                 <li>
                     <a href="#">Redes</a>

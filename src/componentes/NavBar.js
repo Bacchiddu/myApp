@@ -1,10 +1,13 @@
+import CartWidget from '../componentes/CartWidget';
 import './NavBar.css';
 /* import './styless.css'; */
-export default function NavBar() {
+ export default function NavBar() {
     return (
-      <div className="NavBarCompleto">     
+    
+      <div className="NavBarCompleto"> 
         <div className="NavBar">
-            <ul>
+            <ul >
+                
                 <li>
                     <a href="#">Home</a>
                 </li>
@@ -15,11 +18,12 @@ export default function NavBar() {
                     <a href="#">Nosotros</a>
                 </li>
                 <li>
-                    <a href="#">Carrito</a>
+                    <>
+                   <CartWidget/>
+                    </>
                 </li>
-                
             </ul>
         </div>
       </div>
     );
-  }
+  } 

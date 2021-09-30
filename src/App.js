@@ -1,5 +1,6 @@
 import ItemListContainer from '../src/componentes/ItemListContainer/ItemListContainer';
 import NavBar from '../src/componentes/NavBar'; 
+
 import './styles.css';
 
 function App() {
@@ -7,6 +8,8 @@ function App() {
     <div>
     <NavBar/>
     <ItemListContainer title="Bienvenido a mi pagina"/>
+
+    
     </div>
 )
 } 

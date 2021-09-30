@@ -1,0 +1,15 @@
+.btn{
+    width: 30px;
+    border-radius: 10px;
+}
+.btn:hover{
+    
+    background-color: blue;
+}
+.organizado{
+    font-size: small;
+    font-family: Arial;
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+}

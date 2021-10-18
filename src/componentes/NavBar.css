@@ -10,6 +10,8 @@
     /* justify-content: space-around; */
     background-color: rgb(34, 6, 6);
     height: 50px;
+    position: sticky;
+    top: 0;
     
 }
 .NavBar ul{
@@ -37,4 +39,10 @@
 .icono{
     width: 50px;
     height: 30px;
+}
+.organizado{
+    display: flex;
+    position: sticky;
+    top: 0;
+
 }

@@ -4,7 +4,7 @@ import './NavBar.css';
  export default function NavBar() {
     return (
     
-      <div className="NavBarCompleto"> 
+      <div className="NavBarCompleto organizado"> 
         <div className="NavBar">
             <ul >
                 

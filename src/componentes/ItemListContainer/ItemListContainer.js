@@ -1,12 +1,11 @@
-import ItemList from '../ItemListContainer/ItemList';
-import ItemCount from '../ItemCount/ItemCount';
+import ItemList from '../ItemListContainer/ItemList'
+import axios from 'axios';
 
-export default function ItemListContainer(props){
-    console.log("PROPS:", props)
+function ItemListContainer (){
+
     return(
-        <div>
         <ItemList/>
-        <ItemCount stock='5' initial='1'/>
-        </div>
     )
 }
+
+export default ItemListContainer;

@@ -1,6 +1,6 @@
 import React from 'react';
 import './ItemList.css'
-// import { Card, Image } from 'semantic-ui-react';
+/* import { Card, Image } from 'semantic-ui-react';  */
 
 
     

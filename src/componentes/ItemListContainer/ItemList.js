@@ -45,14 +45,14 @@ function App() {
             {info.prev ? (
               <li className="page-item">
                 <button className="page-link" onClick={handlePreviousPage}>
-                  Previous
+                 Volver
                 </button>
               </li>
             ) : null}
             {info.next ? (
               <li className="page-item">
                 <button className="page-link" onClick={handleNextPage}>
-                  Next
+                  Siguiente
                 </button>
               </li>
             ) : null}
@@ -68,14 +68,14 @@ function App() {
             {info.prev ? (
               <li className="page-item">
                 <button className="page-link" onClick={handlePreviousPage}>
-                  Previous
+                  Volver
                 </button>
               </li>
             ) : null}
             {info.next ? (
               <li className="page-item">
                 <button className="page-link" onClick={handleNextPage}>
-                  Next
+                  Siguiente
                 </button>
               </li>
             ) : null}

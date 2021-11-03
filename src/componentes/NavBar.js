@@ -1,5 +1,7 @@
 import CartWidget from '../componentes/CartWidget';
 import './NavBar.css';
+//import para hacer las rutas
+import {Link} from 'react-router-dom'
 /* import './styless.css'; */
  export default function NavBar() {
     return (
@@ -9,13 +11,13 @@ import './NavBar.css';
             <ul >
                 
                 <li>
-                    <a href="#">Home</a>
+                    <Link to="/cards">Home</Link>
                 </li>
                 <li>
-                    <a href="#">Redes</a>
+                    <Link to="/contacto">Redes</Link>
                 </li>
                 <li>
-                    <a href="#">Nosotros</a>
+                    <a href="/">Nosotros</a>
                 </li>
                 <li>
                     <>

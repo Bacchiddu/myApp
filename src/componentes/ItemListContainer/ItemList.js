@@ -1,89 +1,35 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
-// components
-import './ItemList.css'
-import Item from "../ItemListContainer/Item";
+import React, {useState, useEffect} from 'react'
+import CharacterCard from '../Views/InfoCard'; 
+import axios from 'axios';
+import { Link } from 'react-router-dom';
 
-function App() {
-  const [characters, setCharacters] = useState([]);
-  const [info, setInfo] = useState({});
-  const url = "https://rickandmortyapi.com/api/character";
 
-  const fetchCharacters = (url) => {
-    axios
-      .get(url)
-      .then((data) => {
-        setCharacters(data.data.results);
-        setInfo(data.data.info);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  };
 
-  const handleNextPage = () => {
-    fetchCharacters(info.next);
-    window.scrollTo(0, 0);
-  };
+const CharacterList = () =>{
+    const [characters, setCharactes ] = useState([]);
+    
 
-  const handlePreviousPage = () => {
-    fetchCharacters(info.prev);
-    window.scrollTo(0, 0);
-  };
-
-  useEffect(() => {
-    fetchCharacters(url);
-  }, []);
-
-  return (
-    <>
-      
-
-      <div className="container py-5">
-        <nav>
-          <ul className="pagination justify-content-center">
-            {info.prev ? (
-              <li className="page-item">
-                <button className="page-link" onClick={handlePreviousPage}>
-                 Volver
-                </button>
-              </li>
-            ) : null}
-            {info.next ? (
-              <li className="page-item">
-                <button className="page-link" onClick={handleNextPage}>
-                  Siguiente
-                </button>
-              </li>
-            ) : null}
-          </ul>
-        </nav>
-      </div>
-
-      <Item characters={characters} />
-
-      <div className="container pb-5">
-        <nav>
-          <ul className="pagination justify-content-center">
-            {info.prev ? (
-              <li className="page-item">
-                <button className="page-link" onClick={handlePreviousPage}>
-                  Volver
-                </button>
-              </li>
-            ) : null}
-            {info.next ? (
-              <li className="page-item">
-                <button className="page-link" onClick={handleNextPage}>
-                  Siguiente
-                </button>
-              </li>
-            ) : null}
-          </ul>
-        </nav>
-      </div>
-    </>
-  );
-}
-
-export default App;
+    useEffect(() => {
+        setTimeout(() => {
+            console.log('Getting Data');
+        }, 2000 ); 
+        axios('https://breakingbadapi.com/api/characters').then((json)=>
+            setCharactes(json.data)
+        );
+    }, []);
+    //problemas con el .map denuevo
+      return( 
+     <div className='CharacterList-container'>
+        {characters.map((char) =>{ 
+            return (
+                <div key={char.char_id}>
+                  <Link to={`/cards/${char.char_id}`}> 
+                    <CharacterCard data={char}/>
+                    </Link>
+                </div>
+                );
+     })}
+    </div> 
+     ); 
+};
+export default CharacterList; 

@@ -17,7 +17,7 @@ import {Link} from 'react-router-dom'
                     <Link to="/contacto">Redes</Link>
                 </li>
                 <li>
-                    <a href="/">Nosotros</a>
+                    <Link href="/">Nosotros</Link>
                 </li>
                 <li>
                     <>

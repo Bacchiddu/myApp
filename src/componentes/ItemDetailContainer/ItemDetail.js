@@ -1,35 +1,34 @@
-import React from "react";
-import { useParams, useEffect } from "react";
+//Este es el archivo que va a devolver la card con sus datos
+ import React, {useState, useEffect} from 'react'
+import CharacterCard from '../Views/InfoCard'; 
+import axios from 'axios';
+import './Card.css' 
 
- const Nosotros = () =>{
-    const [equipo, setEquipo] = React.useState([])
+
+
+const CharacterList = () =>{
+    const [characters, setCharactes ] = useState([]);
     
-    React.useEffect(() => {
-        obtenerDatos()
-}, [])
 
-    const obtenerDatos = async () => {
-        const data = await fetch('https://rickandmortyapi.com/api/character')
-        const user = data.json()
-        console.log(user)
-        setEquipo(data)
-       /*  console.log(equipo) */
-
-
-        
-    }   
-    
-    return(
-        <div>
-            <ul>
-                {
-                    /*  equipo.map */ (item =>(
-                        <li key={item.id}>{item.name} - {item.species} - {item.status} </li>
-                    )) 
-                }
-            </ul>
-        </div>
-    )
-
-}
-export default Nosotros 
+    useEffect(() => {
+        setTimeout(() => {
+            console.log('Getting Data');
+        }, 2000 ); 
+        axios('https://breakingbadapi.com/api/characters').then((json)=>
+            setCharactes(json.data)
+        );
+    }, []);
+    //problemas con el .map denuevo
+      return( 
+     <div className='CharacterList-container'>
+        {characters.map((char) =>{ 
+            return (
+                <div className="CharacterList-container" key={char.char_id}>
+                    <CharacterCard data={char}/>
+                </div>
+                );
+     })}
+    </div> 
+     ); 
+};
+export default CharacterList; 

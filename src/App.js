@@ -1,13 +1,14 @@
 import ItemListContainer from './componentes/ItemListContainer/ItemListContainer';
 import NavBar from './componentes/NavBar'; 
+import './styles.css'
 // react router dom
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
-import './styles.css';
 import ItemDetail from '../src/componentes/ItemDetailContainer/ItemDetail'
 import ItemDetailContainer from '../src/componentes/ItemDetailContainer/ItemDetail';
 import Home from './componentes/Views/Home';
 import Contacto from './componentes/Views/Contacto';
-import CharacterList from './componentes/Views/Card';
+import CharacterDetail from './componentes/Views/CharacterDetail';
+
 
 
 
@@ -21,15 +22,16 @@ function App() {
         {/* <ItemListContainer title="Bienvenido a mi pagina"/> */}
 
         {/* trae los datos */}
-        <ItemDetailContainer/>
+        {/* <ItemDetailContainer/> */}
         
         <Switch>
           {/* trae las cards */}
-        <Route path = '/cards' component={ItemListContainer}/>
-        <Route path = '/contacto' component={Contacto}/>
+        <Route path = '/cards' exact component={ItemListContainer}/>
+        <Route path = '/contacto' exact component={Contacto}/>
         <Route path = '/' exact component={Home}/>
-        <Route path = '/item/:id' component={ItemDetailContainer} />
-        <Route path = '/character' component= {CharacterList}/>
+        <Route path = '/cards/:id' exact component={CharacterDetail}/>
+       {/*  <Route path = '/item/:id' exact component={ItemDetailContainer} /> */}
+       {/*  <Route path = '/character' component= {CharacterList}/> */}
         </Switch>
       </div>
     </Router>

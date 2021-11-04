@@ -2,16 +2,16 @@ import React from "react";
 import {Card,  Image} from 'semantic-ui-react'
 
 
-const CharacterCard = () => (
+const CharacterCard = ({data}) => (
   <Card>
-    <Image src='/images/avatar/large/matthew.png' wrapped ui={false} />
+    <Image src={data.img} wrapped ui={false} />
     <Card.Content>
-      <Card.Header>Matthew</Card.Header>
+      <Card.Header>{data.name}</Card.Header>
       <Card.Meta>
-        <span className='date'>Joined in 2015</span>
+        <span className='date'>{data.birthday}</span>
       </Card.Meta>
       <Card.Description>
-        Matthew is a musician living in Nashville.
+        Status: {data.status}
       </Card.Description>
     </Card.Content>
    

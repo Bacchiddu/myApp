@@ -19,7 +19,7 @@ const ItemCount = ({stock,initial}) => {
         <div className="btn-sec">
             <button className='btn-dec btn-hover'onClick={desIncrementar} >-</button>
             <button className='btn btn-hover'onClick={incrementar} > +</button>
-            <button className="btn-cart btn-hover "> Agregar al carrito</button>
+            <button className="btn-cart btn-hover "> Agregar</button>
         </div>
     )
 

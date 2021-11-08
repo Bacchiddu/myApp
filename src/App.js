@@ -8,6 +8,7 @@ import ItemDetailContainer from '../src/componentes/ItemDetailContainer/ItemDeta
 import Home from './componentes/Views/Home';
 import Contacto from './componentes/Views/Contacto';
 import CharacterDetail from './componentes/Views/CharacterDetail';
+import ItemCount from './componentes/ItemCount/ItemCount';
 
 
 

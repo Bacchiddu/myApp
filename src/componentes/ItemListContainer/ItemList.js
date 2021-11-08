@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import CharacterCard from '../Views/InfoCard'; 
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import ItemCount from '../ItemCount/ItemCount';
 
 
 
@@ -25,7 +26,9 @@ const CharacterList = () =>{
                 <div key={char.char_id}>
                   <Link to={`/cards/${char.char_id}`}> 
                     <CharacterCard data={char}/>
+                    <ItemCount/>
                     </Link>
+
                 </div>
                 );
      })}
